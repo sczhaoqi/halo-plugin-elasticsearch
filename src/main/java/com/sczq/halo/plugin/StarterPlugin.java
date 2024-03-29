@@ -1,4 +1,4 @@
-package run.halo.starter;
+package com.sczq.halo.plugin;
 
 import org.springframework.stereotype.Component;
 import run.halo.app.plugin.BasePlugin;
@@ -21,11 +21,11 @@ public class StarterPlugin extends BasePlugin {
 
     @Override
     public void start() {
-        System.out.println("插件启动成功！");
+        System.out.println("es插件启动成功！");
     }
 
     @Override
     public void stop() {
-        System.out.println("插件停止！");
+        System.out.println("es插件停止！");
     }
 }

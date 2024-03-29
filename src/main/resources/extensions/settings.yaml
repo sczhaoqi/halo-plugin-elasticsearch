@@ -1,0 +1,28 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: elasticsearch-settings
+spec:
+  forms:
+    - group: base
+      label: 基本设置
+      formSchema:
+        - $formkit: text
+          label: index
+          name: index
+          validation: required
+          value: 'halo_es_index'
+        - $formkit: text
+          label: serverUrl
+          name: serverUrl
+          validation: required
+          value: 'http://localhost:9200'
+        - $formkit: text
+          label: masterKey
+          name: masterKey
+          value: ''
+        - $formkit: text
+          label: 搜索结果长度
+          name: cropLength
+          validation: required|Number
+          value: '80'
