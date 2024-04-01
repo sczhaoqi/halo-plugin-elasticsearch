@@ -98,7 +98,7 @@ jobs:
             const artifactName = process.env.ARTIFACT_NAME
             console.log('Releasing', releaseId, artifactPathName, artifactName)
 
-            await github.repos.uploadReleaseAsset({
+            await github.rest.repos.uploadReleaseAsset({
               owner, repo,
               release_id: releaseId,
               name: artifactName,
